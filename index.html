@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario con jQuery Validación</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="Repsa" content="Ofreciendote las mejores marcas como. KOYO, NSK, NTN, NACHI, FYH, NATIONAL, MUSASHI, WLK, PAYEN Y MUCHAS MAS...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPSA</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+<body class="animated">
 
-<form id="miFormulario">
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" required>
+    <div class="navbar" id="myNavbar">
+        <a href="#" class="active">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Productos</a>
+        <a href="#">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="Menú" width="20">
+        </a>
+      </div>
 
-  <label for="email">Correo electrónico:</label>
-  <input type="email" id="email" name="email" required>
+      <div class="container">
 
-  <label for="mensaje">Mensaje:</label>
-  <textarea id="mensaje" name="mensaje" required></textarea>
+        <div class="carousel">
+            <div class="carousel-contenedor">
+                <div class="carousel-slide">
+                    <img src="img/banner-slogan.png" alt="Repsa">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/banner-slogan.png" alt="Repsa">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/banner-slogan.png" alt="Repsa">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/banner-slogan.png" alt="Repsa">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/banner-slogan.png" alt="Repsa">
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <img class="carousel-control next" src="img/icons8-derecha-círculo-64.png" alt="">
+                <img class="carousel-control prev" src="img/icons8-izquierda-círculo-64.png" alt="">
+            </div>
+        </div>
 
-  <button type="button" onclick="validarFormulario()">Enviar</button>
+        <div>
+            <h1>Distribuidores exclusivos de KOYO en El Salvador</h1>
+        </div>
+        
+    </div>
 
-  <div id="mensajeError" class="error-message"></div>
-</form>
-
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+      <script src="script.js"></script>
 </body>
 </html>
