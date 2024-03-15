@@ -120,6 +120,8 @@ body {
     .navbar {
         padding: 0; 
     }
+      .carousel-control {
+      display: none;}
     
   }
 
