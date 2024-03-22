@@ -94,28 +94,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-    // Deslizamiento táctil para dispositivos móviles
-    let touchStartX = 0;
-    let touchEndX = 0;
-    carouselWrapper.addEventListener("touchstart", function(event) {
-        touchStartX = event.touches[0].clientX;
-    });
+let touchStartX = 0;
+let touchEndX = 0;
+let touchThreshold = 50; // Distancia mínima de deslizamiento para considerar un cambio de slide
 
-    carouselWrapper.addEventListener("touchmove", function(event) {
-        touchEndX = event.touches[0].clientX;
-    });
+carouselWrapper.addEventListener("touchstart", function(event) {
+    touchStartX = event.touches[0].clientX;
+});
 
-    carouselWrapper.addEventListener("touchend", function() {
-        if (touchStartX - touchEndX > 50) {
+carouselWrapper.addEventListener("touchmove", function(event) {
+    touchEndX = event.touches[0].clientX;
+});
+
+carouselWrapper.addEventListener("touchend", function() {
+    let touchDiff = touchStartX - touchEndX;
+    if (Math.abs(touchDiff) > touchThreshold) {
+        if (touchDiff > 0) {
             // Deslizamiento hacia la izquierda
             nextSlide();
-        } else if (touchEndX - touchStartX > 50) {
+        } else {
             // Deslizamiento hacia la derecha
             prevSlide();
         }
-    });
+    }
+    // Restablece los valores de inicio y fin del toque
+    touchStartX = 0;
+    touchEndX = 0;
+    // Previene el comportamiento predeterminado del desplazamiento en dispositivos táctiles
+    event.preventDefault();
+});
 
-    updateCarousel();
+// Resto del código
+
+
 });
 
 
