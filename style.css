@@ -135,6 +135,18 @@ body {
     .navbar {
         padding: 0; 
     }
+
+.carousel {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-top: 9%; 
+}
+      
     .carousel-control {
       display: none;}
     
